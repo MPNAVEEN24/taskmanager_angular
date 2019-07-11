@@ -1,0 +1,32 @@
+.dashed {
+    border-style: dashed;
+    border-color: darkblue;
+  }
+  #displaytask tr:hover {background-color: #ddd;}
+  
+  #displaytask th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkblue;
+    color: white;
+  }
+  input {
+    color:black;
+  }
+  label {
+    color: darkblue;
+  }
+  #search {
+    padding: 5px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid darkblue;
+    
+  }
+  h4 {
+    color:darkblue;
+    text-align: center;
+    align-self: auto;;
+    
+  }

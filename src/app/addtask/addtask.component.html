@@ -1,0 +1,39 @@
+<div id ="addtask" class="dashed">
+<div class="container-fluid">
+
+    
+    
+    <form id="formid" #userForm="ngForm"  (ngSubmit)="onSubmit(taskModel)" >
+      <div class="form-group">
+        <label>task</label>
+        <input type="text" #task="ngModel" placeholder="task" required class="form-control" minlength="5" [class.is-invalid]="task.invalid && task.touched"  name="task" [(ngModel)]="taskModel.task">
+      <small class="text-danger" [class.d-none]="task.valid || task.untouched">task is required</small>
+      </div>
+   
+    <div class="form-group">
+          <label>priority</label>
+          <p>{{taskModel.priority}}</p>
+          <input type="range" min="0" max="30"  #priority="ngModel" placeholder="priority" required class="form-control"  [class.is-invalid]="priority.invalid && priority.touched" name="priority" [(ngModel)]="taskModel.priority">
+              <small class="text-danger" [class.d-none]="priority.valid || priority.untouched">priority is required</small>
+        </div>
+        <div class="form-group">
+            <label>ParentTask</label>
+            <input type="text" #parentTask="ngModel" placeholder="parentTask" required class="form-control"  [class.is-invalid]="parentTask.invalid && parentTask.touched" name="parentTask" [(ngModel)]="taskModel.parentTask">
+                        <small class="text-danger" [class.d-none]="parentTask.valid || parentTask.untouched">parentTask is required</small>
+          </div>
+
+              <div class="form-group">
+                <label>StartDate</label>
+                <input type="date" [value]="date" #startDate="ngModel" placeholder="startDate" required class="form-control"  [class.is-invalid]="startDate.invalid && startDate.touched"name="startDate" [(ngModel)]="taskModel.startDate">
+                            <small class="text-danger" [class.d-none]="startDate.valid || startDate.untouched">startDate is required</small>
+              </div>
+            <div class="form-group">
+                <label>EndDate</label>
+                <input type="date" [value]="date" #endDate="ngModel" placeholder="endDate" required class="form-control" [class.is-invalid]="endDate.invalid && endDate.touched" name="endDate" [(ngModel)]="taskModel.endDate">
+                            <small class="text-danger" [class.d-none]="endDate.valid || endDate.untouched">endDate is required</small>
+              </div>
+      <button id ="submitbtn" class="btn btn-primary"[disabled]="userForm.form.invalid"  type="submit">Submit form</button>
+  
+    </form>
+  </div>
+</div>

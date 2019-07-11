@@ -1,0 +1,38 @@
+<!-- <div>
+<h2>Task Manager </h2>
+</div>
+<div class="example-button-row">
+<button  mat-raised-button color="primary" (click)="onSelectAddTask()" >addtask</button>
+<button  mat-raised-button color="primary" (click)="onSelectDisplayTask()" >displaytask</button>
+</div>
+<div  [hidden]="!addTask">
+<app-addtask></app-addtask>
+</div>
+<div  [hidden]="!displayTask">
+<app-displaytask></app-displaytask>
+</div> -->
+<div>
+  <h2>Task Manager </h2>
+  </div>
+  
+<nav id ="nav"class="navbar navbar-light bg-faded" >
+    <table  class="table table-hover">
+        <thead> 
+            <tr>
+                <th>
+      <div id ="adddiv" class="nav-item active">
+          <a  class="nav-link"  routerLinkActive="active" routerLink="/addtask">Add Task</a>
+      </div>
+    </th>
+    <th>
+    <div id ="disdiv" class="nav-item active">
+      <a class="nav-link"  routerLinkActive="active" routerLink="/displaytask">Display Task</a>
+    </div>
+  </th>
+<tr>
+</thead>
+</table>
+</nav>
+
+
+

@@ -1,0 +1,42 @@
+/* .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+} */
+#form{
+  margin-bottom: 20px;
+}
+.dashed {
+  border-style: dashed;
+  border-color: darkblue;
+}
+
+
+label {
+  color: darkblue;
+}
+input {
+  color:black;
+}
+input {
+  width: 150%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 2px solid darkblue ;
+  border-radius: 4px;
+}
+/* #form {
+  text-align: center;
+} */
+#formid{
+  margin: auto;
+  display: table;
+  text-align: left;
+  padding: 50px 50px;
+  height: 90px
+}
+#submitbtn{
+  border-radius: 12px;
+  background-color:darkblue;
+  position: absolute;
+  top: 90%;
+}
